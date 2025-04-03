@@ -1,0 +1,306 @@
+/*
+Theme Name: IBP WooCommerce Theme
+Theme URI: https://ibpeditora.com.br/
+Author: IBP Editora
+Author URI: https://ibpeditora.com.br/
+Description: Tema personalizado para a loja virtual IBP Editora
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 6.3
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ibp-woocommerce
+*/
+
+:root {
+    --primary-color: #4f0244; /* Cor roxa/púrpura escura do cabeçalho e rodapé */
+    --menu-color: #621772; /* Cor roxa/púrpura escura do menu */
+    --secondary-color: #fff; /* Cor branca */
+    --accent-color: #00b050; /* Cor verde do botão */
+    --text-color: #333; /* Cor do texto principal */
+    --light-gray: #f5f5f5; /* Cor de fundo clara para cards */
+    --border-radius: 8px; /* Arredondamento para botões e cards */
+    --gradient-color: linear-gradient(90deg, rgba(0, 23, 52, 0.5) 0%, rgba(98, 23, 114, 0.5) 100%);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: #e3dfe3;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px 0;
+}
+
+/* Main Navigation */
+.main-navigation {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.main-navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation li {
+    padding: 10px 20px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: transparent;
+    background-image: var(--gradient-color);
+    display: inline-block;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.main-navigation a:hover {
+    text-shadow: 0 0 2px rgba(255,255,255,0.2);
+    transform: scale(1.05);
+}
+
+/* Hero/Banner Section */
+.hero-section {
+    position: relative;
+    padding: 30px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* Free Shipping Banner */
+.booking-banner {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.booking-banner span {
+    display: inline-block;
+    animation: scroll-text 20s linear infinite;
+}
+
+@keyframes scroll-text {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Recent Launches Section */
+.recent-launches {
+    padding: 30px 0;
+}
+
+.recent-launches h2 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin: 30px 0;
+}
+
+.newsletter-section h3 {
+    margin-top: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    border-color: var(--secondary-color);
+}
+
+.newsletter-form button {
+    background-color: #6b2975;
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 30px 0 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-info {
+    font-size: 0.9em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.footer-social a {
+    color: transparent;
+    font-size: 1.5em;
+    background-image: linear-gradient(90deg, #001734 0%, #8a2be2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    text-shadow: 0 0 3px rgba(255,255,255,0.3);
+    transform: scale(1.15);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom .copyright {
+    font-size: 0.9em;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+    background-image: linear-gradient(90deg, #001734 0%, #8a2be2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    text-shadow: 0 0 3px rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+/* WooCommerce Customizations */
+.woocommerce ul.products li.product, 
+.woocommerce-page ul.products li.product {
+    border-radius: var(--border-radius);
+    background-color: var(--light-gray);
+    padding: 15px;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+} 
