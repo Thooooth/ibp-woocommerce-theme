@@ -2009,7 +2009,7 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
     outline: none;
-    margin-left: 30px
+    right: 30px;
 }
 
 .whatsapp-button:hover,
@@ -2090,4 +2090,64 @@ h1.entry-title {
     margin-bottom: 60px;
     font-size: 36px;
     font-weight: 800;
+}
+
+h1.entry-title {
+    display: none !important;
+}
+
+.title-checkout {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--dark-purple)
+}
+.title-checkout i {
+    font-size: 36px;
+    font-weight: 800;
+    background-color: var(--dark-purple);
+    border-radius: 50%;
+    padding: 20px;
+    color: white;
+}
+
+button.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.contained 
+{
+    background-color: var(--dark-purple);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.wp-block-woocommerce-cart.alignwide {
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.wc-block-cart .wc-block-cart__submit-container {
+    padding: 0;
+    background-color: var(--dark-purple);
+    border-radius: 10px;
+}
+.wc-block-cart__submit-container:hover {
+    background-color: var(--dark-purple);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.wc-block-cart__submit-container {
+    background-color: var(--dark-purple);
+    color: white;
+}
+
+a.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained 
+{
+    background-color: var(--dark-purple);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: normal;
+    text-decoration: none;
 }
